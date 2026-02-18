@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Preçario de vinhos</title>
 </head>
 <body>
+    <h1>Preçario de vinhos</h1>
+
+    <!-- searh content -->
+    <div class="search-container">
+        <input type="text" placeholder="Buscar produto..." id="searchInput">
+    </div>
+    <p id="noResults" class="no-results">Nenhum produto encontrado.</p>
     
+    <!-- product list -->
+    <div class="products-list-container">
+        <!-- CAMBIO: Headers en estructura grid con 4 columnas -->
+        <div class="headers">
+            <div class="header">Produto</div>
+            <div class="header">Preço garrafa</div>
+            <div class="header">Preço copo</div>
+            <div class="header"></div><!-- CAMBIO: Columna vacía para botones -->
+        </div>
+        <!-- CAMBIO: Grid container para los productos -->
+        <div class="products-list" id="listContent"></div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

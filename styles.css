@@ -1,0 +1,72 @@
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    max-width: 400px;
+    margin: 0vh auto;
+    padding: 0px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* CAMBIO: Ahora usa CSS Grid con 4 columnas iguales */
+.headers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.products-list-container {
+    margin: 10vh auto;
+    max-width: 600px;
+}
+
+/* CAMBIO: Nuevo contenedor products-list para almacenar todos los items */
+.products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+/* CAMBIO: Nuevo estilo para items individuales del producto */
+.product-item {
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* CAMBIO: Estilo especial para la celda que contiene el botón */
+.product-item.button-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAMBIO: Nuevo estilo para botones de edición */
+.edit-button {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    display: none;
+}
