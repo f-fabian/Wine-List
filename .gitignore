@@ -1,0 +1,25 @@
+# CAMBIO: Archivos de Node/npm
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# CAMBIO: Archivos compilados de Electron
+dist/
+out/
+*.exe
+*.dmg
+
+# CAMBIO: Archivos de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# CAMBIO: IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# CAMBIO: Archivos de datos (opcional, si quieres que cada usuario tenga sus propios datos)
+precios.json

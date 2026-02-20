@@ -4,30 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Preçario de vinhos</title>
+    <!-- CAMBIO: Sin Google Fonts ya que no hay internet. Usar fuentes del sistema -->
+    <title>Lista de Preços</title>
 </head>
 <body>
-    <h1>Preçario de vinhos</h1>
+    <!-- CAMBIO: Logo de la empresa en esquina superior izquierda -->
+    <div class="logo-container">
+        <img src="./assets/logo.png" alt="Hotel Logo" class="hotel-logo">
+    </div>
 
-    <!-- searh content -->
+    <!-- CAMBIO: Header con título centrado y botón a la derecha -->
+    <div class="header-container">
+        <h1>Lista de Preços</h1>
+        <button class="add-product-button" id="addProductBtn">➕ Adicionar</button>
+    </div>
+
+    <!-- search content -->
     <div class="search-container">
-        <input type="text" placeholder="Buscar produto..." id="searchInput">
+        <input type="text" placeholder="Pesquisar produto..." id="searchInput">
     </div>
     <p id="noResults" class="no-results">Nenhum produto encontrado.</p>
-    
+
     <!-- product list -->
     <div class="products-list-container">
         <!-- CAMBIO: Headers en estructura grid con 4 columnas -->
         <div class="headers">
             <div class="header">Produto</div>
-            <div class="header">Preço garrafa</div>
             <div class="header">Preço copo</div>
+            <div class="header">Preço garrafa</div>
             <div class="header"></div><!-- CAMBIO: Columna vacía para botones -->
         </div>
         <!-- CAMBIO: Grid container para los productos -->
         <div class="products-list" id="listContent"></div>
     </div>
 
-    <script src="app.js"></script>
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header" id="modalTitle">Adicionar produto</div>
+            
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Nome do produto:</label>
+                    <input type="text" id="productName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productGlassPrice">Preço copo:</label>
+                    <input type="number" id="productGlassPrice" step="0.01" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productPrice">Preço garrafa:</label>
+                    <input type="number" id="productPrice" step="0.01" min="0">
+                </div>
+                
+                <div class="modal-buttons">
+                    <button type="button" class="cancel-button" id="cancelBtn">Cancelar</button>
+                    <button type="submit" class="save-button">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>    <script src="fix.js"></script>
 </body>
 </html>
